@@ -1,6 +1,5 @@
 const path = require("path")
 const cleanWebpackPlugin = require('clean-webpack-plugin')
-const webpack = require('webpack')
 
 module.exports = {
 	entry: {
@@ -22,8 +21,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new cleanWebpackPlugin(["dist"]),
-		new webpack.HotModuleReplacementPlugin()
+		new cleanWebpackPlugin(["dist"])
 	],
 	resolve: {
 		modules: [

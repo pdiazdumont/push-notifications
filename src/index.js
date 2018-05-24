@@ -2,7 +2,9 @@ init()
 
 async function init() {
 	if ("serviceWorker" in navigator) {
-		await registerServiceWorker("sw.js")
+		window.addEventListener("load", async () => {
+			await registerServiceWorker("sw.js")
+		})
 	}
 }
 
@@ -17,4 +19,8 @@ async function registerServiceWorker(serviceWorker) {
             reject(`Service worker registration failed. Error: ${error}`)
         }
     })
+}
+
+if (module.hot) {
+	module.hot.accept()
 }
