@@ -1,20 +1,39 @@
 {
-	"name": "push-notifications",
-	"version": "1.0.0",
-	"main": "index.js",
-	"author": "Paul Diaz",
-	"license": "MIT",
-	"devDependencies": {
-		"babel-loader": "^7.1.4",
-		"babel-plugin-transform-async-to-generator": "^6.24.1",
-		"clean-webpack-plugin": "^0.1.19",
-		"html-webpack-plugin": "^3.2.0",
-		"webpack": "^4.8.3",
-		"webpack-cli": "^2.1.3",
-		"webpack-dev-server": "^3.1.4",
-		"webpack-merge": "^4.1.2"
-	},
-	"scripts": {
-		"dev": "webpack-dev-server --config webpack/dev.config.js --open"
-	}
+  "name": "push-notifications",
+  "version": "1.0.0",
+  "homepage": "https://github.com/pdiazdumont/push-notifications",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pdiazdumont/push-notifications"
+  },
+  "main": "index.js",
+  "author": "Paul Diaz",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "firebase-tools": "^3.18.5",
+    "html-webpack-plugin": "^3.2.0",
+    "riot-compiler": "^3.5.1",
+    "riot-tag-loader": "^2.0.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack/dev.config.js --open",
+    "build": "webpack --config webpack/release.config.js",
+    "keys": "node src/lib/keys.js",
+    "postinstall": "npm run keys"
+  },
+  "dependencies": {
+    "binary-base64": "^1.1.0",
+    "riot": "^3.10.1",
+    "spectre.css": "^0.5.1"
+  }
 }

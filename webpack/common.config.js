@@ -8,7 +8,7 @@ module.exports = {
 	},
 	output: {
 		filename: "[name].js",
-		path: path.resolve(__dirname, "dist"),
+		path: path.resolve(__dirname, "../dist"),
 		globalObject: "this"
 	},
 	module: {
@@ -17,6 +17,27 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: ["babel-loader"]
+			},
+			{
+				test: /\.tag$/,
+				exclude: /node_modules/,
+				use: [
+					{
+						loader: "riot-tag-loader",
+						options: {
+							type: "es6"
+						}
+					}
+				]
+			},
+			{
+				test: /\.css$/,
+				use: ["style-loader", "css-loader"]
+			},
+			{
+				test: /\.html$/,
+				exclude: /node_modules/,
+				use: ["file-loader?name=[name].[ext]"]
 			}
 		]
 	},
