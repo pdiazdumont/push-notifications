@@ -1,5 +1,6 @@
 language: node_js
+before_script:
+	- npm update -g npm
 node_js:
 	- '6.11.5'
 	- stable
-script: cd server && npm install && npm run deploy
