@@ -1,0 +1,51 @@
+[
+	{
+		"title": "Basic (title and body)",
+		"payload": {
+			"title": "Sample push notification",
+			"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		}
+	},
+	{
+		"title": "Text (title and long body)",
+		"payload": {
+			"title": "Sample push notification",
+			"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ipsum quam, dignissim eu dui nec, bibendum semper dui. Nam vitae porta ligula, et mollis ex. Phasellus condimentum blandit maximus."
+		}
+	},
+	{
+		"title": "Icon (title, body and a small image)",
+		"payload": {
+			"title": "Sample push notification",
+			"body": "Lorem ipsum dolor sit amet.",
+			"icon": "https://pbs.twimg.com/profile_images/906048605168865284/AymcMRgq_400x400.jpg"
+		}
+	},
+	{
+		"title": "Image (title, body and a big image)",
+		"payload": {
+			"title": "Sample push notification",
+			"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"image": "https://i.pinimg.com/originals/07/5d/9f/075d9fc47ddc12e42cbae0cb20f29bbc.jpg"
+		}
+	},
+	{
+		"title": "Action (title, body and action buttons)",
+		"payload": {
+			"title": "Sample push notification",
+			"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"actions": [
+				{
+					"action": "yes",
+					"title": "Yes",
+					"icon": "http://pluspng.com/img-png/png-sad-facebook-sad-2160.png"
+				},
+				{
+					"action": "no",
+					"title": "No",
+					"icon": "https://clipart.info/images/ccovers/1499793239facebook-angry-emoji-like-png.png"
+				}
+			]
+		}
+	}
+]
