@@ -1,5 +1,6 @@
 /node_modules/
 /server/node_modules/
+/server/npm-debug.log
 /server/firebase-debug.log
 /src/keys.json
 /server/keys.json

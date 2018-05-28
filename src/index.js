@@ -11,7 +11,7 @@ import "./riot/notification.tag"
 riot.mount("app", {
 	push: push,
 	key: urlBase64ToUint8Array(keys.publicKey),
-	server: "http://localhost:5000/push-notifications-demo-c6fe1/us-central1/push"
+	server: "https://us-central1-push-notifications-demo-c6fe1.cloudfunctions.net/push"
 })
 
 function urlBase64ToUint8Array(base64String) {
