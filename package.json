@@ -10,9 +10,9 @@
   "author": "Paul Diaz",
   "license": "MIT",
   "devDependencies": {
-    "@babel/preset-env": "^7.0.0-beta.49",
     "babel-loader": "^7.1.4",
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "firebase-tools": "^3.18.5",
@@ -32,7 +32,7 @@
     "keys": "node src/lib/keys.js"
   },
   "dependencies": {
-    "binary-base64": "^1.1.0",
+    "babel-polyfill": "^6.26.0",
     "riot": "^3.10.1",
     "spectre.css": "^0.5.1"
   }

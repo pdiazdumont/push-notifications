@@ -2,8 +2,8 @@ const path = require("path")
 
 module.exports = {
 	entry: {
-		app: "./src/index.js",
-		sw: "./src/sw.js"
+		app: ["babel-polyfill", "./src/index.js"],
+		sw: ["babel-polyfill", "./src/sw.js"]
 	},
 	output: {
 		filename: "[name].js",
@@ -20,14 +20,7 @@ module.exports = {
 			{
 				test: /\.tag$/,
 				exclude: /node_modules/,
-				use: [
-					{
-						loader: "riot-tag-loader",
-						options: {
-							type: "es6"
-						}
-					}
-				]
+				use: ["riot-tag-loader"]
 			},
 			{
 				test: /\.css$/,

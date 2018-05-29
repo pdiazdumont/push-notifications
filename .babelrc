@@ -1,15 +1,8 @@
 {
 	"plugins": [
-		"transform-async-to-generator"
+		"transform-regenerator"
 	],
 	"presets": [
-		[
-			"env",
-			{
-				"targets": {
-					"esmodules": true
-				}
-			}
-		]
+		["env"]
 	]
 }

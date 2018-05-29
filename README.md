@@ -27,4 +27,4 @@ Please check the information in the `package.json` file and you will see the lis
 - Production:  `npm run deploy` or `yarn deploy`
 
 ### Keys
-In order to generate a valid pair of cryptographic keys and store them in the way that this project requires you can execute the command `npm run keys` or `yarn keys`. Please consider that this command will be executed automatically as a post install hook (after `npm install` or `yarn` is completed).
+In order to generate a valid pair of cryptographic keys and store them in the way that this project requires you can execute the command `npm run keys` or `yarn keys`.
