@@ -29,8 +29,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack/dev.config.js --open",
     "build": "webpack --config webpack/release.config.js",
-    "keys": "node src/lib/keys.js",
-    "postinstall": "npm run keys"
+    "keys": "node src/lib/keys.js"
   },
   "dependencies": {
     "binary-base64": "^1.1.0",
