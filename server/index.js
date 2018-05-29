@@ -37,10 +37,19 @@ exports.push = functions.https.onRequest((request, response) => {
 			keys.privateKey
 		)
 
-		webpush.sendNotification(body.subscription, JSON.stringify(body.payload))
-
-		return response
-			.status(200)
-			.send("Ok")
+		webpush
+			.sendNotification(body.subscription, JSON.stringify(body.payload))
+			.then(result => {
+				return response
+					.status(200)
+					.send("Ok")	
+			})
+			.catch((error) => {
+				console.error(error)
+				return response
+					.status(500)
+					.send(error)
+			})
 	})
 });
+
